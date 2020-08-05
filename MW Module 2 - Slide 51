@@ -1,0 +1,12 @@
+```{r}
+month <- month.abb
+calendar <- c()
+for (i in month){
+  if(i ==1) {calendar[i] ="st"}
+  else if(i==2){calendar[i]="nd"}
+  else if(i==3){calendar[i]="rd"}
+  else{calendar[i]="th"}
+}
+sentence <- '%s is the %s%s month of the year.'
+sprintf(sentence, month, length(month), calendar)
+```
