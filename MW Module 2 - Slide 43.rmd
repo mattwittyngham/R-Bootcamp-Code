@@ -1,0 +1,8 @@
+```{r}
+txt <- read.table(file='1.txt', header=TRUE, sep = '\t', stringsAsFactors = FALSE) # Strings
+cls <- read.table(file = '2.txt', header = TRUE, sep = '\t') # Ordinal Factor
+cls <- factor(cls, order = TRUE, levels=c('Freshman', 'Sophomore', 'Junior', 'Senior'))
+major <- read.table(file='3.txt', header=TRUE, sep = '\t') # Factor
+by <- read.table(file='4.txt', header=TRUE, sep = '\t') # Numeric only because you can do computations with birth years
+data.frame(txt,cls,major,by)
+```
