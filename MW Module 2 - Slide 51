@@ -1,12 +1,13 @@
 ```{r}
-month <- month.abb
-calendar <- c()
-for (i in month){
-  if(i ==1) {calendar[i] ="st"}
-  else if(i==2){calendar[i]="nd"}
-  else if(i==3){calendar[i]="rd"}
-  else{calendar[i]="th"}
+month <- month.abb # sets month to the 12 month abbreviation vector
+calendar <- c() # sets 'calendar' to collect all the values below
+for (i in month){ # iterate every instance(month) of the variable month
+  if(i ==1) {calendar[i] ="st"} # if it's the 1st iteration, use "st" 
+  else if(i==2){calendar[i]="nd"} # if it's the 2nd iteration, use "nd"
+  else if(i==3){calendar[i]="rd"} # if it's the 3rd iteration, use "rd"
+  else{calendar[i]="th"} # otherwise, use "th
 }
-sentence <- '%s is the %s%s month of the year.'
-sprintf(sentence, month, length(month), calendar)
+sentence <- '%s is the %s%s month of the year.' # the template sentence
+sprintf(sentence, month, length(month), calendar) # in the template sentence, fill the first %s with the 1st element in month, fill the second %s with the 1st iteration 
+in the length of month, and fill the 3rd %s with the corresponding iteration in calendar
 ```
